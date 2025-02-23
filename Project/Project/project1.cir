@@ -1,0 +1,23 @@
+* D:\Project\project1.sch
+
+* Schematics Version 9.2
+* Fri Aug 05 23:24:59 2022
+
+
+
+** Analysis setup **
+.tran 1n 100u 0 10n
+.OP 
+.LIB "D:\Project\project1.lib"
+
+
+* From [PSPICE NETLIST] section of d:\orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "project1.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

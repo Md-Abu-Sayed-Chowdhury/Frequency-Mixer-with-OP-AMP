@@ -1,0 +1,23 @@
+* D:\Project\Schematic3.sch
+
+* Schematics Version 9.2
+* Sat Aug 13 18:27:41 2022
+
+
+
+** Analysis setup **
+.tran 1u 1000ms 400ms 10u
+.OP 
+.LIB "D:\Project\Schematic3.lib"
+
+
+* From [PSPICE NETLIST] section of d:\orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "Schematic3.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
