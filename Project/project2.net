@@ -1,0 +1,44 @@
+* Schematics Netlist *
+
+
+
+D_D1         $N_0001 $N_0002 D1N914 
+R_R3         $N_0003 $N_0002  10k  
+R_R4         $N_0004 $N_0002  10k  
+R_R5         Va $N_0005  10k  
+R_R2         $N_0002 Va  10k  
+D_D3         $N_0006 $N_0007 D1N914 
+D_D4         $N_0007 Vb D1N914 
+D_D2         Va $N_0001 D1N914 
+R_R8         Vb $N_0005  10k  
+R_R12         0 $N_0008  309.119  
+R_R13         $N_0010 $N_0009  400k  
+R_R14         0 Vout1  100k  
+C_C1         $N_0008 $N_0009  0.1591uF IC=0 
+C_C2         $N_0008 $N_0010  0.1591uF IC=0 
+C_C3         $N_0009 Vout1  0.1uF  
+R_R9         $N_0004 $N_0005  20k  
+R_R1         $N_0003 $N_0005  20k  
+R_R15         $N_0004 $N_0005  20k  
+X_U2         0 $N_0006 a b $N_0007 uA741
+X_U1A         0 $N_0002 a b $N_0001 LM6132B/NS
+X_U4         $N_0010 0 a b $N_0009 uA741
+X_U3         0 $N_0005 a b Vc uA741
+R_R10         $N_0005 Vc  20k  
+R_R11         Vc $N_0008  200k  
+C_C5         $N_0017 Vout2  0.1uF  
+C_C4         $N_0018 $N_0019  0.1591uF IC=0 
+R_R19         0 Vout2  100k  
+C_C6         $N_0018 $N_0017  0.1591uF IC=0 
+X_U5         $N_0019 0 a b $N_0017 uA741
+R_R16         Vc $N_0018  1.43Meg  
+R_R18         $N_0019 $N_0017  2.86Meg  
+R_R17         0 $N_0018  3.512k  
+V_RF         $N_0003 0  
++SIN 0 1V 50 0 0 0
+V_LO         $N_0004 0  
++SIN 0 1V 50 0 0 0
+R_R6         $N_0006 Vb  20k  
+V_V2         0 b 12V
+V_V1         a 0 12V
+R_R7         $N_0004 $N_0006  10k  
